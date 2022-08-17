@@ -16,7 +16,7 @@ request_url = urllib.request.urlopen(url)
 html_doc = request_url.read()
 soup = BeautifulSoup(html_doc, 'html.parser')
 html_doc = soup.prettify()
-
+print("Document found, now getting all text ")
 # get just the text from the html
 text = soup.find_all('p')
 # write the text var to a file
